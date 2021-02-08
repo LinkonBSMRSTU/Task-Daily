@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ytv-Ae-h6v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GLS-Sx-JrZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -24,96 +24,150 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Task_Daily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="InitialViewController" customModule="Task_Daily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpH-fP-NR2">
+                                <rect key="frame" x="146.5" y="510.5" width="121" height="40"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                <state key="normal" title="Get Started!">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuO-oc-LdN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="3bi-wH-Ugg">
+                                <rect key="frame" x="87" y="114" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Z69-qc-vlZ"/>
+                                    <constraint firstAttribute="height" constant="128" id="h4S-sw-QFR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJj-84-KcE">
+                                <rect key="frame" x="138.5" y="257" width="137.5" height="36.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="26"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create tasks and assign them to colligues" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSZ-Y4-pfe">
+                                <rect key="frame" x="0.0" y="328.5" width="414" height="62"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2i-cP-Meb">
+                                <rect key="frame" x="180" y="670.5" width="54" height="40"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FlT-aW-nCA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JpH-fP-NR2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="097-eK-nRW"/>
+                            <constraint firstItem="ZJj-84-KcE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3pw-Xn-j24"/>
+                            <constraint firstItem="rSZ-Y4-pfe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5uT-nf-Og1"/>
+                            <constraint firstItem="rSZ-Y4-pfe" firstAttribute="top" secondItem="ZJj-84-KcE" secondAttribute="bottom" constant="35" id="9rK-Yu-CL7"/>
+                            <constraint firstItem="3bi-wH-Ugg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CTX-WG-0ue"/>
+                            <constraint firstItem="y2i-cP-Meb" firstAttribute="top" secondItem="JpH-fP-NR2" secondAttribute="bottom" constant="120" id="FG6-fJ-Drq"/>
+                            <constraint firstItem="y2i-cP-Meb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NWG-ny-Lsl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rSZ-Y4-pfe" secondAttribute="trailing" id="jLd-4S-GRG"/>
+                            <constraint firstItem="ZJj-84-KcE" firstAttribute="top" secondItem="3bi-wH-Ugg" secondAttribute="bottom" constant="15" id="mnl-oO-3BQ"/>
+                            <constraint firstItem="3bi-wH-Ugg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="pbn-lx-Ih6"/>
+                            <constraint firstItem="JpH-fP-NR2" firstAttribute="top" secondItem="rSZ-Y4-pfe" secondAttribute="bottom" constant="120" id="sRC-O9-9kV"/>
+                            <constraint firstItem="rSZ-Y4-pfe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ujj-ee-Lca"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JIe-MU-GkZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="139"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
         <!--Login Table View Controller-->
         <scene sceneID="6NA-H3-mfB">
             <objects>
-                <tableViewController id="Ytv-Ae-h6v" customClass="LoginTableViewController" customModule="Task_Daily" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dSX-eh-W7B">
+                <tableViewController storyboardIdentifier="LoginTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ytv-Ae-h6v" customClass="LoginTableViewController" customModule="Task_Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dSX-eh-W7B" customClass="TPKeyboardAvoidingTableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
                             <tableViewSection id="ktS-hN-5Ul">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="766" id="UVH-20-94j">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="766"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="794" id="UVH-20-94j">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="794"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UVH-20-94j" id="hN9-Ju-0zN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="766"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="794"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-sv-fET">
-                                                    <rect key="frame" x="87" y="51" width="240" height="128"/>
+                                                    <rect key="frame" x="87" y="31" width="240" height="128"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="128" id="aoC-cN-CVF"/>
                                                         <constraint firstAttribute="width" constant="240" id="dBL-1f-vlS"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-xK-EzG">
-                                                    <rect key="frame" x="138.5" y="194" width="137.5" height="36.5"/>
+                                                    <rect key="frame" x="138.5" y="174" width="137.5" height="36.5"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="26"/>
                                                     <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFF-An-iud">
-                                                    <rect key="frame" x="121" y="257" width="172" height="31"/>
+                                                    <rect key="frame" x="121" y="237" width="172" height="31"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to continue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-id-UsH">
-                                                    <rect key="frame" x="129" y="296" width="156" height="24"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
+                                                    <rect key="frame" x="115.5" y="276" width="183.5" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQB-lS-MnH">
-                                                    <rect key="frame" x="20" y="363" width="104.5" height="27"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="19"/>
+                                                    <rect key="frame" x="20" y="343" width="110" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4e-xw-4NI">
-                                                    <rect key="frame" x="20" y="400" width="374" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4e-xw-4NI">
+                                                    <rect key="frame" x="20" y="381" width="374" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" textContentType="email"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passowrd" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lft-Vp-55y">
-                                                    <rect key="frame" x="20" y="454" width="104.5" height="27"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="19"/>
+                                                    <rect key="frame" x="20" y="435" width="96.5" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18Y-sy-aPS">
-                                                    <rect key="frame" x="20" y="491" width="374" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18Y-sy-aPS">
+                                                    <rect key="frame" x="20" y="473" width="374" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJx-p1-yIW">
-                                                    <rect key="frame" x="141.5" y="533" width="131" height="33"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                                                    <rect key="frame" x="132.5" y="515" width="149" height="36"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
                                                     <state key="normal" title="Forgot Password?"/>
                                                     <connections>
                                                         <action selector="forgotPasswordPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="e5K-Pi-kWj"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-7V-LO0">
-                                                    <rect key="frame" x="174" y="596" width="66" height="43"/>
+                                                    <rect key="frame" x="174" y="581" width="66" height="43"/>
                                                     <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="22"/>
                                                     <state key="normal" title="Log In">
                                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -122,51 +176,63 @@
                                                         <action selector="loginButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="CMB-Bz-HCz"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgu-aZ-A0Y">
-                                                    <rect key="frame" x="260" y="687" width="92" height="35"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                                                    <state key="normal" title="Sign up"/>
-                                                    <connections>
-                                                        <action selector="signUpButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="kVf-tl-qUQ"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9O-aw-WsA">
-                                                    <rect key="frame" x="62" y="693" width="190" height="23"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKA-Ox-r7d">
+                                                    <rect key="frame" x="26.5" y="664" width="361" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9O-aw-WsA">
+                                                            <rect key="frame" x="28" y="20" width="213" height="25.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgu-aZ-A0Y">
+                                                            <rect key="frame" x="249" y="13.5" width="68" height="38"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                            <state key="normal" title="Sign up"/>
+                                                            <connections>
+                                                                <action selector="signUpButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="kVf-tl-qUQ"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Kgu-aZ-A0Y" firstAttribute="leading" secondItem="T9O-aw-WsA" secondAttribute="trailing" constant="8" id="Kuo-b1-d0i"/>
+                                                        <constraint firstItem="T9O-aw-WsA" firstAttribute="leading" secondItem="RKA-Ox-r7d" secondAttribute="leading" constant="28" id="MWh-AR-OqW"/>
+                                                        <constraint firstItem="Kgu-aZ-A0Y" firstAttribute="centerY" secondItem="RKA-Ox-r7d" secondAttribute="centerY" id="PiX-JZ-HNt"/>
+                                                        <constraint firstItem="Kgu-aZ-A0Y" firstAttribute="centerY" secondItem="T9O-aw-WsA" secondAttribute="centerY" id="Vdu-oe-HAD"/>
+                                                        <constraint firstAttribute="height" constant="65" id="ago-ec-poV"/>
+                                                        <constraint firstItem="T9O-aw-WsA" firstAttribute="centerY" secondItem="RKA-Ox-r7d" secondAttribute="centerY" id="irw-EO-ypj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Kgu-aZ-A0Y" secondAttribute="trailing" constant="44" id="tTh-PG-eDl"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="18Y-sy-aPS" firstAttribute="top" secondItem="Lft-Vp-55y" secondAttribute="bottom" constant="10" id="1m4-Zy-JdA"/>
-                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Lft-Vp-55y" secondAttribute="trailing" constant="269.5" id="5TN-B8-GGO"/>
                                                 <constraint firstItem="GL7-xK-EzG" firstAttribute="centerX" secondItem="hN9-Ju-0zN" secondAttribute="centerX" id="5lV-D7-RhF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Z4e-xw-4NI" secondAttribute="trailing" id="6ZL-zh-Sgk"/>
                                                 <constraint firstItem="hjx-id-UsH" firstAttribute="top" secondItem="iFF-An-iud" secondAttribute="bottom" constant="8" id="AHN-Ax-xuY"/>
-                                                <constraint firstItem="Kgu-aZ-A0Y" firstAttribute="centerY" secondItem="T9O-aw-WsA" secondAttribute="centerY" id="BZ7-GK-668"/>
                                                 <constraint firstItem="ROq-sv-fET" firstAttribute="centerX" secondItem="hN9-Ju-0zN" secondAttribute="centerX" id="Dit-ED-cup"/>
-                                                <constraint firstItem="ROq-sv-fET" firstAttribute="top" secondItem="hN9-Ju-0zN" secondAttribute="topMargin" constant="40" id="Dlf-Yp-9Pb"/>
+                                                <constraint firstItem="ROq-sv-fET" firstAttribute="top" secondItem="hN9-Ju-0zN" secondAttribute="topMargin" constant="20" id="Dlf-Yp-9Pb"/>
                                                 <constraint firstItem="Z4e-xw-4NI" firstAttribute="top" secondItem="YQB-lS-MnH" secondAttribute="bottom" constant="10" id="EYD-bj-l5r"/>
                                                 <constraint firstItem="aJx-p1-yIW" firstAttribute="top" secondItem="18Y-sy-aPS" secondAttribute="bottom" constant="8" id="IZT-Ds-0DV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Kgu-aZ-A0Y" secondAttribute="trailing" constant="42" id="KL3-iV-Tvi"/>
                                                 <constraint firstItem="iFF-An-iud" firstAttribute="centerX" secondItem="hN9-Ju-0zN" secondAttribute="centerX" id="M8T-4C-D6L"/>
+                                                <constraint firstItem="RKA-Ox-r7d" firstAttribute="centerX" secondItem="hN9-Ju-0zN" secondAttribute="centerX" id="N39-2g-MMJ"/>
+                                                <constraint firstItem="RKA-Ox-r7d" firstAttribute="top" secondItem="ZK9-7V-LO0" secondAttribute="bottom" constant="40" id="NIj-IQ-ho6"/>
                                                 <constraint firstItem="iFF-An-iud" firstAttribute="top" secondItem="GL7-xK-EzG" secondAttribute="bottom" constant="26.5" id="Omx-mY-WdW"/>
                                                 <constraint firstItem="ZK9-7V-LO0" firstAttribute="top" secondItem="aJx-p1-yIW" secondAttribute="bottom" constant="30" id="QOI-b9-l3b"/>
                                                 <constraint firstItem="aJx-p1-yIW" firstAttribute="centerX" secondItem="hN9-Ju-0zN" secondAttribute="centerX" id="RvF-Go-O3e"/>
                                                 <constraint firstItem="GL7-xK-EzG" firstAttribute="top" secondItem="ROq-sv-fET" secondAttribute="bottom" constant="15" id="UA1-AB-Nw4"/>
                                                 <constraint firstItem="Lft-Vp-55y" firstAttribute="top" secondItem="Z4e-xw-4NI" secondAttribute="bottom" constant="20" id="Ws1-yX-gyE"/>
                                                 <constraint firstItem="hjx-id-UsH" firstAttribute="centerX" secondItem="hN9-Ju-0zN" secondAttribute="centerX" id="XSi-G9-YPg"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Lft-Vp-55y" secondAttribute="trailing" id="ZJz-gO-oWn"/>
                                                 <constraint firstItem="Lft-Vp-55y" firstAttribute="leading" secondItem="Z4e-xw-4NI" secondAttribute="leading" id="Zni-7w-FH6"/>
-                                                <constraint firstItem="T9O-aw-WsA" firstAttribute="leading" secondItem="hN9-Ju-0zN" secondAttribute="leadingMargin" constant="42" id="Zvc-Ga-VJR"/>
                                                 <constraint firstItem="Z4e-xw-4NI" firstAttribute="leading" secondItem="YQB-lS-MnH" secondAttribute="leading" id="aw3-4x-8jE"/>
                                                 <constraint firstItem="18Y-sy-aPS" firstAttribute="leading" secondItem="Lft-Vp-55y" secondAttribute="leading" id="bYa-jf-5hi"/>
                                                 <constraint firstItem="YQB-lS-MnH" firstAttribute="top" secondItem="iFF-An-iud" secondAttribute="bottom" constant="75" id="ccG-jK-SeW"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="YQB-lS-MnH" secondAttribute="trailing" id="ceo-Cl-KOT"/>
                                                 <constraint firstItem="ZK9-7V-LO0" firstAttribute="centerX" secondItem="hN9-Ju-0zN" secondAttribute="centerX" id="evj-2O-vgT"/>
                                                 <constraint firstItem="YQB-lS-MnH" firstAttribute="leading" secondItem="hN9-Ju-0zN" secondAttribute="leadingMargin" id="fmF-7b-dWU"/>
                                                 <constraint firstItem="18Y-sy-aPS" firstAttribute="trailing" secondItem="hN9-Ju-0zN" secondAttribute="trailingMargin" id="hvv-ly-Png"/>
-                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="YQB-lS-MnH" secondAttribute="trailing" constant="269.5" id="kOu-s6-0Ko"/>
-                                                <constraint firstItem="T9O-aw-WsA" firstAttribute="top" secondItem="ZK9-7V-LO0" secondAttribute="bottom" constant="54" id="sym-aA-mD4"/>
-                                                <constraint firstItem="Kgu-aZ-A0Y" firstAttribute="leading" secondItem="T9O-aw-WsA" secondAttribute="trailing" constant="8" id="wTz-zN-eBn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -188,7 +254,478 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uea-Ed-3Mp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.97101449275374" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1768.1159420289857" y="138.61607142857142"/>
+        </scene>
+        <!--Sign Up Table View Controller-->
+        <scene sceneID="rwo-HH-j9v">
+            <objects>
+                <tableViewController storyboardIdentifier="SignUpTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N8K-V3-ukV" customClass="SignUpTableViewController" customModule="Task_Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AUb-fA-wzc" customClass="TPKeyboardAvoidingTableView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="LBJ-f8-4rn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="819" id="25j-PQ-Lga">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="819"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25j-PQ-Lga" id="Kt8-a8-lYI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="819"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="W4d-RV-Pj7">
+                                                    <rect key="frame" x="87" y="31" width="240" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="aWc-ad-SFi"/>
+                                                        <constraint firstAttribute="width" constant="240" id="yvK-cg-oqL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-xJ-iVK">
+                                                    <rect key="frame" x="138.5" y="174" width="137.5" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="26"/>
+                                                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DJ-yE-O3Q">
+                                                    <rect key="frame" x="165" y="225.5" width="84.5" height="31"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtY-YM-M6U">
+                                                    <rect key="frame" x="20" y="292" width="99" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G1P-UN-olH">
+                                                    <rect key="frame" x="20" y="330" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Id" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf0-UG-mAs">
+                                                    <rect key="frame" x="20" y="384" width="78" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fNb-Xq-GdY">
+                                                    <rect key="frame" x="20" y="422" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passowrd" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-eg-Gt9">
+                                                    <rect key="frame" x="20" y="476" width="96.5" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dvq-nG-8ee">
+                                                    <rect key="frame" x="20" y="514" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Passowrd" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLT-yg-WVU">
+                                                    <rect key="frame" x="20" y="564" width="182.5" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-Yk-uV5">
+                                                    <rect key="frame" x="20" y="602" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPB-hI-jLc">
+                                                    <rect key="frame" x="164" y="661" width="86" height="43"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="22"/>
+                                                    <state key="normal" title="Sign Up">
+                                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="loginButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="Bh1-Wr-5xg"/>
+                                                        <action selector="signUpButtonPressed:" destination="N8K-V3-ukV" eventType="touchUpInside" id="66u-k2-u5t"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZ3-ds-puG">
+                                                    <rect key="frame" x="35.5" y="719" width="343" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alreadyan account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUK-jE-nGf">
+                                                            <rect key="frame" x="36" y="20" width="182" height="25.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbs-y7-71m">
+                                                            <rect key="frame" x="226" y="13.5" width="53" height="38"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                            <state key="normal" title="Log In"/>
+                                                            <connections>
+                                                                <action selector="signInButtonPressed:" destination="N8K-V3-ukV" eventType="touchUpInside" id="WGa-CJ-Plw"/>
+                                                                <action selector="signUpButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="VTJ-ah-JvV"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="iUK-jE-nGf" firstAttribute="centerY" secondItem="hZ3-ds-puG" secondAttribute="centerY" id="Ach-te-uKZ"/>
+                                                        <constraint firstItem="tbs-y7-71m" firstAttribute="centerY" secondItem="hZ3-ds-puG" secondAttribute="centerY" id="MbD-EK-Aql"/>
+                                                        <constraint firstAttribute="height" constant="65" id="SxH-Cc-YBJ"/>
+                                                        <constraint firstItem="tbs-y7-71m" firstAttribute="leading" secondItem="iUK-jE-nGf" secondAttribute="trailing" constant="8" id="TBh-KV-Fxa"/>
+                                                        <constraint firstItem="iUK-jE-nGf" firstAttribute="baseline" secondItem="tbs-y7-71m" secondAttribute="baseline" id="VPP-kZ-ene"/>
+                                                        <constraint firstItem="iUK-jE-nGf" firstAttribute="leading" secondItem="hZ3-ds-puG" secondAttribute="leading" constant="36" id="b72-b4-5U7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tbs-y7-71m" secondAttribute="trailing" constant="64" id="nZz-rn-x1K"/>
+                                                        <constraint firstItem="tbs-y7-71m" firstAttribute="centerY" secondItem="iUK-jE-nGf" secondAttribute="centerY" id="uyz-94-RS9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="G1P-UN-olH" secondAttribute="trailing" id="6Yi-Qc-jM9"/>
+                                                <constraint firstItem="AtY-YM-M6U" firstAttribute="top" secondItem="9DJ-yE-O3Q" secondAttribute="bottom" constant="35.5" id="7ds-AH-pK6"/>
+                                                <constraint firstItem="bCf-Yk-uV5" firstAttribute="trailing" secondItem="Kt8-a8-lYI" secondAttribute="trailingMargin" id="A0x-6z-QSy"/>
+                                                <constraint firstItem="W4d-RV-Pj7" firstAttribute="top" secondItem="Kt8-a8-lYI" secondAttribute="topMargin" constant="20" id="BdD-KL-YPh"/>
+                                                <constraint firstItem="bCf-Yk-uV5" firstAttribute="top" secondItem="BLT-yg-WVU" secondAttribute="bottom" constant="10" id="Bns-CX-k9w"/>
+                                                <constraint firstItem="Aog-xJ-iVK" firstAttribute="centerX" secondItem="Kt8-a8-lYI" secondAttribute="centerX" id="CUL-Az-hLM"/>
+                                                <constraint firstItem="LPB-hI-jLc" firstAttribute="top" secondItem="bCf-Yk-uV5" secondAttribute="bottom" constant="25" id="Cu0-Ww-3cC"/>
+                                                <constraint firstItem="W4d-RV-Pj7" firstAttribute="centerX" secondItem="Kt8-a8-lYI" secondAttribute="centerX" id="FjU-uZ-tnB"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="AtY-YM-M6U" secondAttribute="trailing" id="Fki-aJ-Lbu"/>
+                                                <constraint firstItem="fNb-Xq-GdY" firstAttribute="trailing" secondItem="Kt8-a8-lYI" secondAttribute="trailingMargin" id="H0F-Ji-yQc"/>
+                                                <constraint firstItem="cf0-UG-mAs" firstAttribute="leading" secondItem="G1P-UN-olH" secondAttribute="leading" id="JQa-to-7Bn"/>
+                                                <constraint firstItem="G1P-UN-olH" firstAttribute="leading" secondItem="AtY-YM-M6U" secondAttribute="leading" id="P0R-ws-OIx"/>
+                                                <constraint firstItem="9DJ-yE-O3Q" firstAttribute="centerX" secondItem="Kt8-a8-lYI" secondAttribute="centerX" id="Pn4-Vb-ZhG"/>
+                                                <constraint firstItem="LPB-hI-jLc" firstAttribute="centerX" secondItem="Kt8-a8-lYI" secondAttribute="centerX" id="QWX-yQ-yxf"/>
+                                                <constraint firstItem="fNb-Xq-GdY" firstAttribute="top" secondItem="cf0-UG-mAs" secondAttribute="bottom" constant="10" id="QzS-bC-ITi"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Yi3-eg-Gt9" secondAttribute="trailing" id="Rpa-bM-7V3"/>
+                                                <constraint firstItem="Aog-xJ-iVK" firstAttribute="top" secondItem="W4d-RV-Pj7" secondAttribute="bottom" constant="15" id="T2n-1R-2Ed"/>
+                                                <constraint firstItem="hZ3-ds-puG" firstAttribute="centerX" secondItem="Kt8-a8-lYI" secondAttribute="centerX" id="TZB-Bz-DCP"/>
+                                                <constraint firstItem="BLT-yg-WVU" firstAttribute="top" secondItem="dvq-nG-8ee" secondAttribute="bottom" constant="16" id="VUp-4k-xBP"/>
+                                                <constraint firstItem="BLT-yg-WVU" firstAttribute="leading" secondItem="dvq-nG-8ee" secondAttribute="leading" id="VjD-6n-hjf"/>
+                                                <constraint firstItem="AtY-YM-M6U" firstAttribute="leading" secondItem="Kt8-a8-lYI" secondAttribute="leadingMargin" id="Vsj-rY-R1f"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BLT-yg-WVU" secondAttribute="trailing" id="Yqk-rK-U9M"/>
+                                                <constraint firstItem="G1P-UN-olH" firstAttribute="top" secondItem="AtY-YM-M6U" secondAttribute="bottom" constant="10" id="bEi-Fh-2mL"/>
+                                                <constraint firstItem="fNb-Xq-GdY" firstAttribute="leading" secondItem="cf0-UG-mAs" secondAttribute="leading" id="bpl-Zc-rYs"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="cf0-UG-mAs" secondAttribute="trailing" id="gay-a5-B2f"/>
+                                                <constraint firstItem="hZ3-ds-puG" firstAttribute="top" secondItem="LPB-hI-jLc" secondAttribute="bottom" constant="15" id="hZ7-Lt-Wlh"/>
+                                                <constraint firstItem="dvq-nG-8ee" firstAttribute="leading" secondItem="Yi3-eg-Gt9" secondAttribute="leading" id="kKe-82-SNc"/>
+                                                <constraint firstItem="cf0-UG-mAs" firstAttribute="top" secondItem="G1P-UN-olH" secondAttribute="bottom" constant="20" id="kUV-YO-qKB"/>
+                                                <constraint firstItem="Yi3-eg-Gt9" firstAttribute="top" secondItem="fNb-Xq-GdY" secondAttribute="bottom" constant="20" id="kqB-h8-RuZ"/>
+                                                <constraint firstItem="bCf-Yk-uV5" firstAttribute="leading" secondItem="BLT-yg-WVU" secondAttribute="leading" id="qri-2X-Lgq"/>
+                                                <constraint firstItem="9DJ-yE-O3Q" firstAttribute="top" secondItem="Aog-xJ-iVK" secondAttribute="bottom" constant="15" id="sVY-7W-owW"/>
+                                                <constraint firstItem="Yi3-eg-Gt9" firstAttribute="leading" secondItem="fNb-Xq-GdY" secondAttribute="leading" id="wIF-b8-3ZM"/>
+                                                <constraint firstItem="dvq-nG-8ee" firstAttribute="top" secondItem="Yi3-eg-Gt9" secondAttribute="bottom" constant="10" id="wjS-se-wTO"/>
+                                                <constraint firstItem="dvq-nG-8ee" firstAttribute="trailing" secondItem="Kt8-a8-lYI" secondAttribute="trailingMargin" id="wt6-Da-HtF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="N8K-V3-ukV" id="dfg-Ng-p23"/>
+                            <outlet property="delegate" destination="N8K-V3-ukV" id="TVO-Ej-bg9"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="bCf-Yk-uV5" id="wiM-zr-rq7"/>
+                        <outlet property="emailTextField" destination="fNb-Xq-GdY" id="gWZ-Hb-cyT"/>
+                        <outlet property="nameTextField" destination="G1P-UN-olH" id="cHF-yf-saC"/>
+                        <outlet property="passwordTextField" destination="dvq-nG-8ee" id="LLf-SS-cLF"/>
+                        <outlet property="signUpButton" destination="LPB-hI-jLc" id="ZBF-Y0-uLe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynQ-wM-ebv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2491.304347826087" y="138.61607142857142"/>
+        </scene>
+        <!--Forgot Password Table View Controller-->
+        <scene sceneID="Bky-ne-lGm">
+            <objects>
+                <tableViewController storyboardIdentifier="ForgotPasswordTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9PE-W7-mPZ" customClass="ForgotPasswordTableViewController" customModule="Task_Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NaT-IX-7Qb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="9lT-rn-40Q">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="819" id="0mS-JK-vNy">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="819"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0mS-JK-vNy" id="d88-cq-uwL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="819"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="koS-0C-YDE">
+                                                    <rect key="frame" x="87" y="51" width="240" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="7Jp-nF-YK8"/>
+                                                        <constraint firstAttribute="width" constant="240" id="MvX-f7-mxd"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laq-9N-6jg">
+                                                    <rect key="frame" x="138.5" y="194" width="137.5" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="26"/>
+                                                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opy-zJ-Bty">
+                                                    <rect key="frame" x="115" y="245.5" width="184" height="31"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email below to receive your password instruction with a password reset code." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llj-QK-kUw">
+                                                    <rect key="frame" x="20" y="301.5" width="374" height="84"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-sP-Ae7">
+                                                    <rect key="frame" x="20" y="430.5" width="141" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s7O-fE-UZa">
+                                                    <rect key="frame" x="20" y="473.5" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gul-lS-5hM">
+                                                    <rect key="frame" x="129.5" y="552.5" width="155" height="43"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="22"/>
+                                                    <state key="normal" title="Send Request">
+                                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="loginButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="HWd-gR-1c9"/>
+                                                        <action selector="passwordResetPressed:" destination="9PE-W7-mPZ" eventType="touchUpInside" id="Vxs-Rn-FNn"/>
+                                                        <action selector="signUpButtonPressed:" destination="N8K-V3-ukV" eventType="touchUpInside" id="zul-fD-jGT"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrF-Gt-rcG">
+                                                    <rect key="frame" x="180.5" y="715.5" width="53" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                    <state key="normal" title="Log In"/>
+                                                    <connections>
+                                                        <action selector="loginPressed:" destination="9PE-W7-mPZ" eventType="touchUpInside" id="X4g-h0-sxZ"/>
+                                                        <action selector="signInButtonPressed:" destination="N8K-V3-ukV" eventType="touchUpInside" id="fy1-ys-ynh"/>
+                                                        <action selector="signUpButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="6nM-Q5-Agv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s7O-fE-UZa" firstAttribute="leading" secondItem="dD4-sP-Ae7" secondAttribute="leading" id="036-jF-1nh"/>
+                                                <constraint firstItem="Opy-zJ-Bty" firstAttribute="centerX" secondItem="d88-cq-uwL" secondAttribute="centerX" id="1kS-qI-fDh"/>
+                                                <constraint firstItem="laq-9N-6jg" firstAttribute="centerX" secondItem="d88-cq-uwL" secondAttribute="centerX" id="7hs-sJ-G77"/>
+                                                <constraint firstItem="QrF-Gt-rcG" firstAttribute="top" secondItem="gul-lS-5hM" secondAttribute="bottom" constant="120" id="A5J-gE-Pt9"/>
+                                                <constraint firstItem="dD4-sP-Ae7" firstAttribute="leading" secondItem="d88-cq-uwL" secondAttribute="leadingMargin" id="CYX-Hc-A6r"/>
+                                                <constraint firstItem="llj-QK-kUw" firstAttribute="top" secondItem="Opy-zJ-Bty" secondAttribute="bottom" constant="25" id="Jms-4x-CQj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s7O-fE-UZa" secondAttribute="trailing" id="Kp2-zh-GKG"/>
+                                                <constraint firstItem="koS-0C-YDE" firstAttribute="top" secondItem="d88-cq-uwL" secondAttribute="topMargin" constant="40" id="MH2-zg-xnt"/>
+                                                <constraint firstItem="dD4-sP-Ae7" firstAttribute="top" secondItem="llj-QK-kUw" secondAttribute="bottom" constant="45" id="NSe-Nw-atp"/>
+                                                <constraint firstItem="gul-lS-5hM" firstAttribute="centerX" secondItem="d88-cq-uwL" secondAttribute="centerX" id="Naf-Cr-hUH"/>
+                                                <constraint firstItem="llj-QK-kUw" firstAttribute="leading" secondItem="d88-cq-uwL" secondAttribute="leadingMargin" id="P9V-xF-7eC"/>
+                                                <constraint firstItem="s7O-fE-UZa" firstAttribute="top" secondItem="dD4-sP-Ae7" secondAttribute="bottom" constant="15" id="Tdw-ws-z4E"/>
+                                                <constraint firstItem="laq-9N-6jg" firstAttribute="top" secondItem="koS-0C-YDE" secondAttribute="bottom" constant="15" id="TrZ-Cl-LW2"/>
+                                                <constraint firstItem="QrF-Gt-rcG" firstAttribute="centerX" secondItem="d88-cq-uwL" secondAttribute="centerX" id="Wfo-bQ-gL9"/>
+                                                <constraint firstItem="gul-lS-5hM" firstAttribute="top" secondItem="s7O-fE-UZa" secondAttribute="bottom" constant="45" id="fB6-oA-54y"/>
+                                                <constraint firstItem="koS-0C-YDE" firstAttribute="centerX" secondItem="d88-cq-uwL" secondAttribute="centerX" id="hIn-ka-KEH"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="dD4-sP-Ae7" secondAttribute="trailing" id="iCd-TU-2zN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="llj-QK-kUw" secondAttribute="trailing" id="np5-EX-ysQ"/>
+                                                <constraint firstItem="Opy-zJ-Bty" firstAttribute="top" secondItem="laq-9N-6jg" secondAttribute="bottom" constant="15" id="pk9-KG-qoy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9PE-W7-mPZ" id="29F-F1-qWR"/>
+                            <outlet property="delegate" destination="9PE-W7-mPZ" id="nAZ-Bz-zbs"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="s7O-fE-UZa" id="Ito-rb-hAm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpB-5K-FLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3228.985507246377" y="134.59821428571428"/>
+        </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="So7-B8-YkA">
+            <objects>
+                <tableViewController storyboardIdentifier="ResetPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zl4-fF-4QZ" customClass="ResetPasswordViewController" customModule="Task_Daily" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tv8-cL-kob">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="yRK-JT-ngx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="796" id="TZy-IN-YHc">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="796"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TZy-IN-YHc" id="6sa-Pg-Rd6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-P6-wbI">
+                                                    <rect key="frame" x="87" y="31" width="240" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="IeY-Ru-1PG"/>
+                                                        <constraint firstAttribute="width" constant="240" id="kKS-MA-kos"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wk8-IZ-oKW">
+                                                    <rect key="frame" x="138.5" y="174" width="137.5" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="26"/>
+                                                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prt-fU-fNL">
+                                                    <rect key="frame" x="120" y="225.5" width="174" height="31"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset code was sent to your email. Please enter the code and create new password." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utt-Mh-64V">
+                                                    <rect key="frame" x="20" y="281.5" width="374" height="84"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Code" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-o7-KMt">
+                                                    <rect key="frame" x="20" y="390.5" width="374" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter reset code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-l1-ihr">
+                                                    <rect key="frame" x="20" y="433.5" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Password" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYj-EX-fqS">
+                                                    <rect key="frame" x="20" y="487.5" width="374" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5z3-wT-GhW">
+                                                    <rect key="frame" x="20" y="530.5" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zl-oj-q29">
+                                                    <rect key="frame" x="20" y="584.5" width="374" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Retype your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJS-4C-9v0">
+                                                    <rect key="frame" x="20" y="627.5" width="374" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-eA-Rmx">
+                                                    <rect key="frame" x="103.5" y="686.5" width="207" height="43"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="22"/>
+                                                    <state key="normal" title="Change Password">
+                                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changePasswordPressed:" destination="zl4-fF-4QZ" eventType="touchUpInside" id="DUE-Zd-eSh"/>
+                                                        <action selector="loginButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="BZg-L8-ghc"/>
+                                                        <action selector="passwordResetPressed:" destination="9PE-W7-mPZ" eventType="touchUpInside" id="Usg-Jl-rqj"/>
+                                                        <action selector="signUpButtonPressed:" destination="N8K-V3-ukV" eventType="touchUpInside" id="fml-jI-wHn"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYk-r6-u8T">
+                                                    <rect key="frame" x="180.5" y="754.5" width="53" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                                    <state key="normal" title="Log In"/>
+                                                    <connections>
+                                                        <action selector="loginPressed:" destination="zl4-fF-4QZ" eventType="touchUpInside" id="nHD-pT-Gf1"/>
+                                                        <action selector="loginPressed:" destination="9PE-W7-mPZ" eventType="touchUpInside" id="vj3-Dw-Okf"/>
+                                                        <action selector="signInButtonPressed:" destination="N8K-V3-ukV" eventType="touchUpInside" id="p3Z-Jt-Rqy"/>
+                                                        <action selector="signUpButtonPressed:" destination="Ytv-Ae-h6v" eventType="touchUpInside" id="5rH-1U-BLC"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Utt-Mh-64V" firstAttribute="trailing" secondItem="6sa-Pg-Rd6" secondAttribute="trailingMargin" id="4qQ-n4-8lC"/>
+                                                <constraint firstItem="6zl-oj-q29" firstAttribute="leading" secondItem="5z3-wT-GhW" secondAttribute="leading" id="57y-Fk-qfs"/>
+                                                <constraint firstItem="VJS-4C-9v0" firstAttribute="leading" secondItem="6zl-oj-q29" secondAttribute="leading" id="5Jf-Bv-ecb"/>
+                                                <constraint firstItem="mYj-EX-fqS" firstAttribute="top" secondItem="Oih-l1-ihr" secondAttribute="bottom" constant="20" id="6CG-Tt-g0N"/>
+                                                <constraint firstItem="Utt-Mh-64V" firstAttribute="top" secondItem="Prt-fU-fNL" secondAttribute="bottom" constant="25" id="EWn-ka-ixR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6zl-oj-q29" secondAttribute="trailing" id="Egj-PH-qrn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EPC-o7-KMt" secondAttribute="trailing" id="Frv-GV-62d"/>
+                                                <constraint firstItem="gyO-eA-Rmx" firstAttribute="centerX" secondItem="6sa-Pg-Rd6" secondAttribute="centerX" id="Gz1-KF-kUo"/>
+                                                <constraint firstItem="Wk8-IZ-oKW" firstAttribute="top" secondItem="R6G-P6-wbI" secondAttribute="bottom" constant="15" id="H4s-C3-Vcy"/>
+                                                <constraint firstItem="R6G-P6-wbI" firstAttribute="centerX" secondItem="6sa-Pg-Rd6" secondAttribute="centerX" id="Inx-Cy-17m"/>
+                                                <constraint firstItem="Oih-l1-ihr" firstAttribute="leading" secondItem="EPC-o7-KMt" secondAttribute="leading" id="JNy-W9-jUj"/>
+                                                <constraint firstItem="EPC-o7-KMt" firstAttribute="top" secondItem="Utt-Mh-64V" secondAttribute="bottom" constant="25" id="MtM-vP-0aq"/>
+                                                <constraint firstItem="Prt-fU-fNL" firstAttribute="centerX" secondItem="6sa-Pg-Rd6" secondAttribute="centerX" id="OdG-KZ-DvQ"/>
+                                                <constraint firstItem="Wk8-IZ-oKW" firstAttribute="centerX" secondItem="6sa-Pg-Rd6" secondAttribute="centerX" id="PDL-fw-CFp"/>
+                                                <constraint firstItem="mYj-EX-fqS" firstAttribute="trailing" secondItem="6sa-Pg-Rd6" secondAttribute="trailingMargin" id="ToF-zY-0b0"/>
+                                                <constraint firstItem="Prt-fU-fNL" firstAttribute="top" secondItem="Wk8-IZ-oKW" secondAttribute="bottom" constant="15" id="WdG-kH-VUV"/>
+                                                <constraint firstItem="5z3-wT-GhW" firstAttribute="leading" secondItem="mYj-EX-fqS" secondAttribute="leading" id="Za3-A5-2je"/>
+                                                <constraint firstItem="6zl-oj-q29" firstAttribute="top" secondItem="5z3-wT-GhW" secondAttribute="bottom" constant="20" id="dPB-tL-g9i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Oih-l1-ihr" secondAttribute="trailing" id="dZT-ee-AMr"/>
+                                                <constraint firstItem="VJS-4C-9v0" firstAttribute="trailing" secondItem="6sa-Pg-Rd6" secondAttribute="trailingMargin" id="dhS-5P-Up4"/>
+                                                <constraint firstItem="Utt-Mh-64V" firstAttribute="leading" secondItem="6sa-Pg-Rd6" secondAttribute="leadingMargin" id="dqS-0H-2n4"/>
+                                                <constraint firstItem="mYj-EX-fqS" firstAttribute="leading" secondItem="6sa-Pg-Rd6" secondAttribute="leadingMargin" id="j07-fF-u8N"/>
+                                                <constraint firstItem="gyO-eA-Rmx" firstAttribute="top" secondItem="VJS-4C-9v0" secondAttribute="bottom" constant="25" id="k1z-O3-0yL"/>
+                                                <constraint firstItem="5z3-wT-GhW" firstAttribute="top" secondItem="mYj-EX-fqS" secondAttribute="bottom" constant="15" id="ldV-8G-xIw"/>
+                                                <constraint firstItem="EPC-o7-KMt" firstAttribute="leading" secondItem="6sa-Pg-Rd6" secondAttribute="leadingMargin" id="njq-64-VlQ"/>
+                                                <constraint firstItem="Oih-l1-ihr" firstAttribute="top" secondItem="EPC-o7-KMt" secondAttribute="bottom" constant="15" id="noi-yl-JYX"/>
+                                                <constraint firstItem="WYk-r6-u8T" firstAttribute="centerX" secondItem="6sa-Pg-Rd6" secondAttribute="centerX" id="pTg-b0-fxK"/>
+                                                <constraint firstItem="R6G-P6-wbI" firstAttribute="top" secondItem="6sa-Pg-Rd6" secondAttribute="topMargin" constant="20" id="tAq-qf-gV0"/>
+                                                <constraint firstItem="VJS-4C-9v0" firstAttribute="top" secondItem="6zl-oj-q29" secondAttribute="bottom" constant="15" id="u9P-Fc-gg2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5z3-wT-GhW" secondAttribute="trailing" id="yaT-Pm-bZ7"/>
+                                                <constraint firstItem="WYk-r6-u8T" firstAttribute="top" secondItem="gyO-eA-Rmx" secondAttribute="bottom" constant="25" id="zQB-4F-TqR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="zl4-fF-4QZ" id="3Sn-1f-1XQ"/>
+                            <outlet property="delegate" destination="zl4-fF-4QZ" id="eO8-C8-2s3"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="changePasswordButton" destination="gyO-eA-Rmx" id="4zv-lY-npe"/>
+                        <outlet property="confirmPassword" destination="VJS-4C-9v0" id="AH2-SN-LRp"/>
+                        <outlet property="loginButton" destination="WYk-r6-u8T" id="xVp-SP-i3j"/>
+                        <outlet property="newPassword" destination="5z3-wT-GhW" id="K3F-sd-Rbc"/>
+                        <outlet property="resetCode" destination="Oih-l1-ihr" id="dhd-aO-CME"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyb-Gj-sXq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3947.826086956522" y="128.57142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SJ0-or-7IF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GLS-Sx-JrZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fhA-zW-Rfp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HLZ-xU-t05"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzY-SI-ul4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
