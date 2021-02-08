@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpTableViewController: UITableViewController {
+class SignUpViewController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -36,7 +36,7 @@ class SignUpTableViewController: UITableViewController {
 }
 
 
-extension SignUpTableViewController {
+extension SignUpViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height
@@ -54,7 +54,7 @@ extension SignUpTableViewController {
     }
 }
 
-extension SignUpTableViewController {
+extension SignUpViewController {
 
     fileprivate func ValidateSignUpCredential() {
 

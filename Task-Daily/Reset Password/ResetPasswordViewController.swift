@@ -31,7 +31,7 @@ class ResetPasswordViewController: UITableViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        if let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginTableViewController") as? LoginTableViewController {
+        if let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginTableViewController") as? LoginViewController {
             self.navigationController?.pushViewController(loginVC, animated: true)
         }
     }

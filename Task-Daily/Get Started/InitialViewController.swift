@@ -17,14 +17,14 @@ class InitialViewController: UIViewController {
 
     @IBAction func loginClicked(_ sender: Any) {
         
-        if let signUpVC = self.storyboard?.instantiateViewController(identifier: "SignUpTableViewController") as? SignUpTableViewController {
+        if let signUpVC = self.storyboard?.instantiateViewController(identifier: "SignUpTableViewController") as? SignUpViewController {
             self.navigationController?.pushViewController (signUpVC, animated: true)
         }
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
         
-        if let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginTableViewController") as? LoginTableViewController {
+        if let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginTableViewController") as? LoginViewController {
             self.navigationController?.pushViewController (loginVC, animated: true)
         }
     }

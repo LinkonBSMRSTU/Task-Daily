@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginTableViewController: UITableViewController {
+class LoginViewController: UITableViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
@@ -19,10 +19,6 @@ class LoginTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loginButton.layer.cornerRadius = 5
-        loginButton.layer.borderWidth = 0.5
-        loginButton.layer.borderColor = UIColor.black.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +35,7 @@ class LoginTableViewController: UITableViewController {
     // MARK: - Forgot Password Button Action
 
     @IBAction func forgotPasswordPressed(_ sender: Any) {
-        if let forgotPassVC = self.storyboard?.instantiateViewController(identifier: "ForgotPasswordTableViewController") as? ForgotPasswordTableViewController {
+        if let forgotPassVC = self.storyboard?.instantiateViewController(identifier: "ForgotPasswordTableViewController") as? ForgotPasswordViewController {
             self.navigationController?.pushViewController (forgotPassVC, animated: true)
         }
     }
@@ -47,14 +43,14 @@ class LoginTableViewController: UITableViewController {
     // MARK: - SignUp Password Button Action
     @IBAction func signUpButtonPressed(_ sender: Any) {
         print("SignUp Clicked")
-        if let signupVC = self.storyboard?.instantiateViewController(identifier: "SignUpTableViewController") as? SignUpTableViewController {
+        if let signupVC = self.storyboard?.instantiateViewController(identifier: "SignUpTableViewController") as? SignUpViewController {
             self.navigationController?.pushViewController (signupVC, animated: true)
         }
     }
 }
 
 
-extension LoginTableViewController {
+extension LoginViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height
@@ -74,7 +70,7 @@ extension LoginTableViewController {
 
 
 
-extension LoginTableViewController {
+extension LoginViewController {
 
     fileprivate func ValidateLoginCredential() {
 

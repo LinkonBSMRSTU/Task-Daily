@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgotPasswordTableViewController: UITableViewController {
+class ForgotPasswordViewController: UITableViewController {
 
     @IBOutlet weak var emailAddressTextField: UITextField!
     
@@ -34,7 +34,7 @@ class ForgotPasswordTableViewController: UITableViewController {
     }
 }
 
-extension ForgotPasswordTableViewController {
+extension ForgotPasswordViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height

@@ -16,7 +16,7 @@
 		4FD62FBB25D108340079FB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD62FB925D108340079FB93 /* LaunchScreen.storyboard */; };
 		4FD62FC625D108340079FB93 /* Task_DailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FC525D108340079FB93 /* Task_DailyTests.swift */; };
 		4FD62FD125D108340079FB93 /* Task_DailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FD025D108340079FB93 /* Task_DailyUITests.swift */; };
-		4FD62FDF25D109130079FB93 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FDE25D109130079FB93 /* LoginTableViewController.swift */; };
+		4FD62FDF25D109130079FB93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FDE25D109130079FB93 /* LoginViewController.swift */; };
 		4FD62FF225D10BA30079FB93 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD62FE025D10BA10079FB93 /* Poppins-Bold.ttf */; };
 		4FD62FF325D10BA30079FB93 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD62FE125D10BA20079FB93 /* Poppins-SemiBoldItalic.ttf */; };
 		4FD62FF425D10BA30079FB93 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FD62FE225D10BA20079FB93 /* Poppins-Italic.ttf */; };
@@ -38,8 +38,8 @@
 		4FDB920825D189CE008A6CC5 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB920725D189CE008A6CC5 /* String + Extension.swift */; };
 		4FDB920A25D18A06008A6CC5 /* UiAlertController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB920925D18A06008A6CC5 /* UiAlertController + Extension.swift */; };
 		4FDB920C25D18A50008A6CC5 /* UiViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB920B25D18A50008A6CC5 /* UiViewController + Extension.swift */; };
-		4FDB921025D19AB8008A6CC5 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB920F25D19AB8008A6CC5 /* SignUpTableViewController.swift */; };
-		4FDB921225D1A6EF008A6CC5 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB921125D1A6EF008A6CC5 /* ForgotPasswordTableViewController.swift */; };
+		4FDB921025D19AB8008A6CC5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB920F25D19AB8008A6CC5 /* SignUpViewController.swift */; };
+		4FDB921225D1A6EF008A6CC5 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB921125D1A6EF008A6CC5 /* ForgotPasswordViewController.swift */; };
 		4FDB921425D1B2AA008A6CC5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB921325D1B2AA008A6CC5 /* ResetPasswordViewController.swift */; };
 		B04193200536D8310A8AC92E /* Pods_Task_Daily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B77C5AA638673AA6885F329 /* Pods_Task_Daily.framework */; };
 		DE9850AA0D98C95AF23C0E4C /* Pods_Task_DailyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F0566FC3FDDB76871A6C3C /* Pods_Task_DailyTests.framework */; };
@@ -80,7 +80,7 @@
 		4FD62FCC25D108340079FB93 /* Task-DailyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task-DailyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD62FD025D108340079FB93 /* Task_DailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_DailyUITests.swift; sourceTree = "<group>"; };
 		4FD62FD225D108340079FB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FD62FDE25D109130079FB93 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		4FD62FDE25D109130079FB93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4FD62FE025D10BA10079FB93 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		4FD62FE125D10BA20079FB93 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		4FD62FE225D10BA20079FB93 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		4FDB920725D189CE008A6CC5 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		4FDB920925D18A06008A6CC5 /* UiAlertController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiAlertController + Extension.swift"; sourceTree = "<group>"; };
 		4FDB920B25D18A50008A6CC5 /* UiViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController + Extension.swift"; sourceTree = "<group>"; };
-		4FDB920F25D19AB8008A6CC5 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
-		4FDB921125D1A6EF008A6CC5 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
+		4FDB920F25D19AB8008A6CC5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4FDB921125D1A6EF008A6CC5 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		4FDB921325D1B2AA008A6CC5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		711B2402F1BF1204A467D9CD /* Pods-Task-Daily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-Daily.release.xcconfig"; path = "Target Support Files/Pods-Task-Daily/Pods-Task-Daily.release.xcconfig"; sourceTree = "<group>"; };
 		78DC363545075C96B3B413FB /* Pods-Task-DailyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-DailyTests.release.xcconfig"; path = "Target Support Files/Pods-Task-DailyTests/Pods-Task-DailyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 		4FDB921625D1B985008A6CC5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4FD62FDE25D109130079FB93 /* LoginTableViewController.swift */,
+				4FD62FDE25D109130079FB93 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 		4FDB921725D1B9A9008A6CC5 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
-				4FDB920F25D19AB8008A6CC5 /* SignUpTableViewController.swift */,
+				4FDB920F25D19AB8008A6CC5 /* SignUpViewController.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 		4FDB921825D1B9B5008A6CC5 /* Forgot Password */ = {
 			isa = PBXGroup;
 			children = (
-				4FDB921125D1A6EF008A6CC5 /* ForgotPasswordTableViewController.swift */,
+				4FDB921125D1A6EF008A6CC5 /* ForgotPasswordViewController.swift */,
 			);
 			path = "Forgot Password";
 			sourceTree = "<group>";
@@ -558,14 +558,14 @@
 			files = (
 				4FDB920A25D18A06008A6CC5 /* UiAlertController + Extension.swift in Sources */,
 				4FD62FB325D108300079FB93 /* InitialViewController.swift in Sources */,
-				4FD62FDF25D109130079FB93 /* LoginTableViewController.swift in Sources */,
+				4FD62FDF25D109130079FB93 /* LoginViewController.swift in Sources */,
 				4FDB920C25D18A50008A6CC5 /* UiViewController + Extension.swift in Sources */,
 				4FDB920825D189CE008A6CC5 /* String + Extension.swift in Sources */,
 				4FD62FAF25D108300079FB93 /* AppDelegate.swift in Sources */,
 				4FD62FB125D108300079FB93 /* SceneDelegate.swift in Sources */,
 				4FDB921425D1B2AA008A6CC5 /* ResetPasswordViewController.swift in Sources */,
-				4FDB921025D19AB8008A6CC5 /* SignUpTableViewController.swift in Sources */,
-				4FDB921225D1A6EF008A6CC5 /* ForgotPasswordTableViewController.swift in Sources */,
+				4FDB921025D19AB8008A6CC5 /* SignUpViewController.swift in Sources */,
+				4FDB921225D1A6EF008A6CC5 /* ForgotPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
