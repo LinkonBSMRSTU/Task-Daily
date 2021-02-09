@@ -7,6 +7,7 @@ target 'Task-Daily' do
 
   # Pods for Task-Daily
   pod 'TPKeyboardAvoiding'
+  pod 'Alamofire'
 
   target 'Task-DailyTests' do
     inherit! :search_paths

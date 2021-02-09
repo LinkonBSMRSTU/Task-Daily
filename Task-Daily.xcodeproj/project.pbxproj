@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		41E1968BAB0FF5BC5916F77D /* Pods_Task_Daily_Task_DailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D322BBFF269878A6D9E74B27 /* Pods_Task_Daily_Task_DailyUITests.framework */; };
+		4F8C76CF25D24F8C007DDB1D /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76CE25D24F8C007DDB1D /* APIConstant.swift */; };
+		4F8C76D225D25186007DDB1D /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D125D25186007DDB1D /* RegisterModel.swift */; };
+		4F8C76D625D251EC007DDB1D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D525D251EC007DDB1D /* APIManager.swift */; };
+		4F8C76D825D26AE3007DDB1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D725D26AE3007DDB1D /* HomeViewController.swift */; };
 		4FD62FAF25D108300079FB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FAE25D108300079FB93 /* AppDelegate.swift */; };
 		4FD62FB125D108300079FB93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FB025D108300079FB93 /* SceneDelegate.swift */; };
 		4FD62FB325D108300079FB93 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FB225D108300079FB93 /* InitialViewController.swift */; };
@@ -66,6 +70,10 @@
 		2C3FFB539195B219BEF62F01 /* Pods-Task-Daily-Task-DailyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-Daily-Task-DailyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Task-Daily-Task-DailyUITests/Pods-Task-Daily-Task-DailyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30F0566FC3FDDB76871A6C3C /* Pods_Task_DailyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_DailyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B77C5AA638673AA6885F329 /* Pods_Task_Daily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_Daily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F8C76CE25D24F8C007DDB1D /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		4F8C76D125D25186007DDB1D /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		4F8C76D525D251EC007DDB1D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		4F8C76D725D26AE3007DDB1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4FD62FAB25D108300079FB93 /* Task-Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-Daily.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD62FAE25D108300079FB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD62FB025D108300079FB93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +149,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F8C76D025D24F90007DDB1D /* API Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C76CE25D24F8C007DDB1D /* APIConstant.swift */,
+			);
+			path = "API Constant";
+			sourceTree = "<group>";
+		};
+		4F8C76D325D2518D007DDB1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C76D125D25186007DDB1D /* RegisterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4F8C76D425D251C7007DDB1D /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C76D525D251EC007DDB1D /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		4F8C76D925D26AF9007DDB1D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C76D725D26AE3007DDB1D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		4FD62FA225D108300079FB93 = {
 			isa = PBXGroup;
 			children = (
@@ -169,14 +209,18 @@
 				4FD62FAE25D108300079FB93 /* AppDelegate.swift */,
 				4FD62FB025D108300079FB93 /* SceneDelegate.swift */,
 				4FD62FB425D108300079FB93 /* Main.storyboard */,
+				4F8C76D925D26AF9007DDB1D /* Home */,
 				4FDB920625D189A1008A6CC5 /* Extension */,
+				4F8C76D425D251C7007DDB1D /* APIManager */,
+				4F8C76D025D24F90007DDB1D /* API Constant */,
+				4F8C76D325D2518D007DDB1D /* Models */,
 				4FDB921525D1B961008A6CC5 /* Get Started */,
 				4FDB921625D1B985008A6CC5 /* Login */,
 				4FDB921725D1B9A9008A6CC5 /* Sign Up */,
 				4FDB921825D1B9B5008A6CC5 /* Forgot Password */,
 				4FDB921925D1B9C2008A6CC5 /* Reset Password */,
-				4FD62FB725D108340079FB93 /* Assets.xcassets */,
 				4FD6300525D10BB80079FB93 /* Fonts */,
+				4FD62FB725D108340079FB93 /* Assets.xcassets */,
 				4FD62FB925D108340079FB93 /* LaunchScreen.storyboard */,
 				4FD62FBC25D108340079FB93 /* Info.plist */,
 			);
@@ -560,10 +604,14 @@
 				4FD62FB325D108300079FB93 /* InitialViewController.swift in Sources */,
 				4FD62FDF25D109130079FB93 /* LoginViewController.swift in Sources */,
 				4FDB920C25D18A50008A6CC5 /* UiViewController + Extension.swift in Sources */,
+				4F8C76CF25D24F8C007DDB1D /* APIConstant.swift in Sources */,
+				4F8C76D825D26AE3007DDB1D /* HomeViewController.swift in Sources */,
 				4FDB920825D189CE008A6CC5 /* String + Extension.swift in Sources */,
 				4FD62FAF25D108300079FB93 /* AppDelegate.swift in Sources */,
 				4FD62FB125D108300079FB93 /* SceneDelegate.swift in Sources */,
+				4F8C76D225D25186007DDB1D /* RegisterModel.swift in Sources */,
 				4FDB921425D1B2AA008A6CC5 /* ResetPasswordViewController.swift in Sources */,
+				4F8C76D625D251EC007DDB1D /* APIManager.swift in Sources */,
 				4FDB921025D19AB8008A6CC5 /* SignUpViewController.swift in Sources */,
 				4FDB921225D1A6EF008A6CC5 /* ForgotPasswordViewController.swift in Sources */,
 			);

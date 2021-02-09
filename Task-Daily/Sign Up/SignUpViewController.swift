@@ -15,50 +15,88 @@ class SignUpViewController: UITableViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
+
     @IBAction func signUpButtonPressed(_ sender: Any) {
+
+        if self.ValidateSignUpCredential() {
+            self.callSignUpApi()
+        }
     }
-    
+
     @IBAction func signInButtonPressed(_ sender: Any) {
-        
+
         self.navigationController?.popViewController(animated: true)
     }
-    
+
+    func callSignUpApi() {
+
+        guard let name = self.nameTextField.text else {
+            return
+        }
+        guard let email = self.emailTextField.text else {
+            return
+        }
+        guard let password = self.passwordTextField.text else {
+            return
+        }
+
+        let registerData = RegisterModel(name: name, email: email, password: password)
+        APIManager.sharedInstance.callRegisterAPI(register: registerData) { (success, message) in
+
+            if success {
+
+//                self.openAlert(title: "Success", message: message, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+//                    print("Okay clicked!")
+//                }])
+                if let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as? HomeViewController {
+                    self.navigationController?.pushViewController (homeVC, animated: true)
+                }
+
+            } else {
+                self.openAlert(title: "Error", message: message, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+                    print("Okay clicked!")
+                }])
+            }
+        }
+    }
+
 }
 
 
+
+
 extension SignUpViewController {
-    
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let tableViewHeight = self.tableView.frame.height
         let contentHeight = self.tableView.contentSize.height
-        
+
         let centeringInset = (tableViewHeight - contentHeight) / 2.0
         let topInset = max(centeringInset, 0.0)
-        
+
         self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
     }
 }
 
 extension SignUpViewController {
 
-    fileprivate func ValidateSignUpCredential() {
+    fileprivate func ValidateSignUpCredential() -> Bool {
 
-        if let fullName = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text, let confirmPassword = confirmPasswordTextField.text{
+        if let fullName = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text, let confirmPassword = confirmPasswordTextField.text {
 
             if fullName == "" {
 
@@ -99,6 +137,9 @@ extension SignUpViewController {
                         print("Okay clicked!")
                     }])
 
+                    self.passwordTextField.text = ""
+                    self.confirmPasswordTextField.text = ""
+
                 } else if password != confirmPassword {
 
                     openAlert(title: "Error", message: "Password doesn't match.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
@@ -106,11 +147,10 @@ extension SignUpViewController {
                         self.confirmPasswordTextField.text = ""
                         print("Okay clicked!")
                     }])
-                    
-                    
 
                 } else {
                     // Navigation - Home Screen
+                    return true
                 }
 
             }
@@ -119,5 +159,7 @@ extension SignUpViewController {
                 print("Okay clicked!")
             }])
         }
+        return false
     }
+
 }
