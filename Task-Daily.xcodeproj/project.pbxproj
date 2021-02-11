@@ -29,6 +29,8 @@
 		4F8C76D225D25186007DDB1D /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D125D25186007DDB1D /* RegisterModel.swift */; };
 		4F8C76D625D251EC007DDB1D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D525D251EC007DDB1D /* APIManager.swift */; };
 		4F8C76D825D26AE3007DDB1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D725D26AE3007DDB1D /* HomeViewController.swift */; };
+		4FB8554525D5EA0A00615363 /* UserRegistrationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8554425D5EA0A00615363 /* UserRegistrationModelTests.swift */; };
+		4FB8554725D5EAEA00615363 /* UserRegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8554625D5EAEA00615363 /* UserRegistrationModel.swift */; };
 		4FD62FAF25D108300079FB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FAE25D108300079FB93 /* AppDelegate.swift */; };
 		4FD62FB125D108300079FB93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FB025D108300079FB93 /* SceneDelegate.swift */; };
 		4FD62FB325D108300079FB93 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD62FB225D108300079FB93 /* InitialViewController.swift */; };
@@ -108,6 +110,8 @@
 		4F8C76D125D25186007DDB1D /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		4F8C76D525D251EC007DDB1D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4F8C76D725D26AE3007DDB1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4FB8554425D5EA0A00615363 /* UserRegistrationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationModelTests.swift; sourceTree = "<group>"; };
+		4FB8554625D5EAEA00615363 /* UserRegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationModel.swift; sourceTree = "<group>"; };
 		4FD62FAB25D108300079FB93 /* Task-Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-Daily.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD62FAE25D108300079FB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD62FB025D108300079FB93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,10 +252,19 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		4FB8554825D5EB7300615363 /* Unit Test */ = {
+			isa = PBXGroup;
+			children = (
+				4FB8554625D5EAEA00615363 /* UserRegistrationModel.swift */,
+			);
+			path = "Unit Test";
+			sourceTree = "<group>";
+		};
 		4FD62FA225D108300079FB93 = {
 			isa = PBXGroup;
 			children = (
 				4FD62FAD25D108300079FB93 /* Task-Daily */,
+				4FB8554825D5EB7300615363 /* Unit Test */,
 				4FD62FC425D108340079FB93 /* Task-DailyTests */,
 				4FD62FCF25D108340079FB93 /* Task-DailyUITests */,
 				4FD62FAC25D108300079FB93 /* Products */,
@@ -301,6 +314,7 @@
 		4FD62FC425D108340079FB93 /* Task-DailyTests */ = {
 			isa = PBXGroup;
 			children = (
+				4FB8554425D5EA0A00615363 /* UserRegistrationModelTests.swift */,
 				4FD62FC525D108340079FB93 /* Task_DailyTests.swift */,
 				4FD62FC725D108340079FB93 /* Info.plist */,
 			);
@@ -684,6 +698,7 @@
 				4F556C6325D456D9008A255C /* DeleteViewController.swift in Sources */,
 				4FD62FB325D108300079FB93 /* InitialViewController.swift in Sources */,
 				4FD62FDF25D109130079FB93 /* LoginViewController.swift in Sources */,
+				4FB8554725D5EAEA00615363 /* UserRegistrationModel.swift in Sources */,
 				4FDB920C25D18A50008A6CC5 /* UiViewController + Extension.swift in Sources */,
 				4F8C76CF25D24F8C007DDB1D /* APIConstant.swift in Sources */,
 				4F81475A25D5000B006188E1 /* LogOutModel.swift in Sources */,
@@ -713,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB8554525D5EA0A00615363 /* UserRegistrationModelTests.swift in Sources */,
 				4FD62FC625D108340079FB93 /* Task_DailyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
