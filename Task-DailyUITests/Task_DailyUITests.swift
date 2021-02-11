@@ -33,6 +33,7 @@ class Task_DailyUITests: XCTestCase {
 //        let app = XCUIApplication()
         
         let app = XCUIApplication()
+        app.launch()
         app/*@START_MENU_TOKEN@*/.buttons["shift"]/*[[".keyboards.buttons[\"shift\"]",".buttons[\"shift\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         let pKey = app/*@START_MENU_TOKEN@*/.keys["P"]/*[[".keyboards.keys[\"P\"]",".keys[\"P\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
@@ -54,7 +55,7 @@ class Task_DailyUITests: XCTestCase {
         fKey.tap()
         fKey.tap()
         app.tables.cells.children(matching: .textField).element(boundBy: 1).swipeUp()
-//        app.launch()
+        app.launch()
         
 //        let app = XCUIApplication()
 //        app/*@START_MENU_TOKEN@*/.keys["d"]/*[[".keyboards.keys[\"d\"]",".keys[\"d\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -73,6 +74,18 @@ class Task_DailyUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testExampleLaunch() throws {
+            // UI tests must launch the application that they test.
+
+            
+            let app = XCUIApplication()
+            app.launch()
+      
+
+            // Use recording to get started writing UI tests.
+            // Use XCTAssert and related functions to verify your tests produce the correct results.
+        }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
