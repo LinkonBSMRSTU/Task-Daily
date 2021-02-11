@@ -1,5 +1,5 @@
 //
-//  ForgotPasswordTableViewController.swift
+//  ForgotPasswordViewController.swift
 //  Task-Daily
 //
 //  Created by Fazle Rabbi Linkon on 8/2/21.

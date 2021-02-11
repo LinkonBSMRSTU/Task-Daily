@@ -1,5 +1,5 @@
 //
-//  SignUpTableViewController.swift
+//  SignUpViewController.swift
 //  Task-Daily
 //
 //  Created by Fazle Rabbi Linkon on 8/2/21.
@@ -28,6 +28,7 @@ class SignUpViewController: UITableViewController {
     @IBAction func signUpButtonPressed(_ sender: Any) {
 
         if self.ValidateSignUpCredential() {
+            Indicator.sharedInstance.showIndicator()
             self.callSignUpApi()
         }
     }
@@ -48,20 +49,27 @@ class SignUpViewController: UITableViewController {
         guard let password = self.passwordTextField.text else {
             return
         }
+        guard let password_confirmation = self.passwordTextField.text else {
+            return
+        }
+        
 
-        let registerData = RegisterModel(name: name, email: email, password: password)
-        APIManager.sharedInstance.callRegisterAPI(register: registerData) { (success, message) in
+        let registerData = RegisterModel(name: name, email: email, password: password, password_confirmation: password_confirmation)
+        APIManager.sharedInstance.registerAPI(register: registerData) { (success, message) in
 
             if success {
 
-//                self.openAlert(title: "Success", message: message, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-//                    print("Okay clicked!")
-//                }])
-                if let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as? HomeViewController {
-                    self.navigationController?.pushViewController (homeVC, animated: true)
-                }
+                Indicator.sharedInstance.hideIndicator()
+                self.openAlert(title: "Success", message: "Account Created Successfully! \n Login to continue.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+                    
+                    if let loginVC = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+                        self.navigationController?.pushViewController (loginVC, animated: true)
+                    }
+                    
+                }])
 
             } else {
+                Indicator.sharedInstance.hideIndicator()
                 self.openAlert(title: "Error", message: message, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                     print("Okay clicked!")
                 }])

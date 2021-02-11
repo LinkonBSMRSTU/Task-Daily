@@ -8,8 +8,11 @@
 
 import Foundation
 
-let app_id = "B23B5AD3-037B-AEAC-FFDD-2B226061C300"
-let rest_key = "F90DD0F5-5FF0-4BD6-83AB-8EED9DE76E9E"
-let base_url = "https://api.backendless.com/\(app_id)/\(rest_key)/users"
-let register_url = "\(base_url)/register"
-let login_url = ""
+
+let base_url = "http://127.0.0.1:8001"
+let register_url = "\(base_url)/api/auth/register"
+let login_url = "\(base_url)/api/auth/login"
+let addTask_url = "\(base_url)/api/v1/todo"
+let logOut_url = "\(base_url)/api/auth/logout"
+let taskData_url = "\(base_url)/api/v1/todo"
+var taskDelete_url = "\(base_url)/api/v1/todo"

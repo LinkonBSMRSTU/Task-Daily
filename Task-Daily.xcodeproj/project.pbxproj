@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		41E1968BAB0FF5BC5916F77D /* Pods_Task_Daily_Task_DailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D322BBFF269878A6D9E74B27 /* Pods_Task_Daily_Task_DailyUITests.framework */; };
+		4F4AA23F25D55D2D00D16604 /* TaskDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AA23E25D55D2D00D16604 /* TaskDataModel.swift */; };
+		4F556BEB25D3FC1E008A255C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556BEA25D3FC1E008A255C /* LoginModel.swift */; };
+		4F556BED25D400DD008A255C /* NSUserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556BEC25D400DD008A255C /* NSUserDefaults + Extension.swift */; };
+		4F556C4425D43074008A255C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F556C4325D43074008A255C /* Localizable.strings */; };
+		4F556C4625D4308B008A255C /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C4525D4308B008A255C /* NSObject+Extension.swift */; };
+		4F556C5225D43770008A255C /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C5025D43770008A255C /* TypeCollectionViewCell.swift */; };
+		4F556C5325D43770008A255C /* TypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F556C5125D43770008A255C /* TypeCollectionViewCell.xib */; };
+		4F556C5625D43789008A255C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C5425D43789008A255C /* TaskTableViewCell.swift */; };
+		4F556C5725D43789008A255C /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F556C5525D43789008A255C /* TaskTableViewCell.xib */; };
+		4F556C5925D43C17008A255C /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C5825D43C17008A255C /* UIView + Extension.swift */; };
+		4F556C5C25D45021008A255C /* UIProgessView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C5B25D45021008A255C /* UIProgessView + Extension.swift */; };
+		4F556C5F25D4538B008A255C /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C5D25D4538B008A255C /* EditTableViewCell.swift */; };
+		4F556C6025D4538B008A255C /* EditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F556C5E25D4538B008A255C /* EditTableViewCell.xib */; };
+		4F556C6325D456D9008A255C /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C6225D456D9008A255C /* DeleteViewController.swift */; };
+		4F556C6825D47AC2008A255C /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F556C6725D47AC2008A255C /* AddTaskViewController.swift */; };
+		4F81475825D4F95A006188E1 /* AddTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F81475725D4F95A006188E1 /* AddTaskModel.swift */; };
+		4F81475A25D5000B006188E1 /* LogOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F81475925D5000B006188E1 /* LogOutModel.swift */; };
 		4F8C76CF25D24F8C007DDB1D /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76CE25D24F8C007DDB1D /* APIConstant.swift */; };
 		4F8C76D225D25186007DDB1D /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D125D25186007DDB1D /* RegisterModel.swift */; };
 		4F8C76D625D251EC007DDB1D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C76D525D251EC007DDB1D /* APIManager.swift */; };
@@ -70,6 +87,23 @@
 		2C3FFB539195B219BEF62F01 /* Pods-Task-Daily-Task-DailyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-Daily-Task-DailyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Task-Daily-Task-DailyUITests/Pods-Task-Daily-Task-DailyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30F0566FC3FDDB76871A6C3C /* Pods_Task_DailyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_DailyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B77C5AA638673AA6885F329 /* Pods_Task_Daily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_Daily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4AA23E25D55D2D00D16604 /* TaskDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataModel.swift; sourceTree = "<group>"; };
+		4F556BEA25D3FC1E008A255C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4F556BEC25D400DD008A255C /* NSUserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults + Extension.swift"; sourceTree = "<group>"; };
+		4F556C4325D43074008A255C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		4F556C4525D4308B008A255C /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		4F556C5025D43770008A255C /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F556C5125D43770008A255C /* TypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F556C5425D43789008A255C /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		4F556C5525D43789008A255C /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		4F556C5825D43C17008A255C /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		4F556C5B25D45021008A255C /* UIProgessView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProgessView + Extension.swift"; sourceTree = "<group>"; };
+		4F556C5D25D4538B008A255C /* EditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
+		4F556C5E25D4538B008A255C /* EditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTableViewCell.xib; sourceTree = "<group>"; };
+		4F556C6225D456D9008A255C /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
+		4F556C6725D47AC2008A255C /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		4F81475725D4F95A006188E1 /* AddTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskModel.swift; sourceTree = "<group>"; };
+		4F81475925D5000B006188E1 /* LogOutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutModel.swift; sourceTree = "<group>"; };
 		4F8C76CE25D24F8C007DDB1D /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		4F8C76D125D25186007DDB1D /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		4F8C76D525D251EC007DDB1D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -149,6 +183,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F556C4725D43708008A255C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4F556C5025D43770008A255C /* TypeCollectionViewCell.swift */,
+				4F556C5125D43770008A255C /* TypeCollectionViewCell.xib */,
+				4F556C5425D43789008A255C /* TaskTableViewCell.swift */,
+				4F556C5525D43789008A255C /* TaskTableViewCell.xib */,
+				4F556C5D25D4538B008A255C /* EditTableViewCell.swift */,
+				4F556C5E25D4538B008A255C /* EditTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4F556C6125D456AE008A255C /* Delete Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				4F556C6225D456D9008A255C /* DeleteViewController.swift */,
+			);
+			path = "Delete Tasks";
+			sourceTree = "<group>";
+		};
+		4F556C6625D47A4B008A255C /* Add Task */ = {
+			isa = PBXGroup;
+			children = (
+				4F556C6725D47AC2008A255C /* AddTaskViewController.swift */,
+			);
+			path = "Add Task";
+			sourceTree = "<group>";
+		};
 		4F8C76D025D24F90007DDB1D /* API Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +224,10 @@
 			isa = PBXGroup;
 			children = (
 				4F8C76D125D25186007DDB1D /* RegisterModel.swift */,
+				4F556BEA25D3FC1E008A255C /* LoginModel.swift */,
+				4F81475725D4F95A006188E1 /* AddTaskModel.swift */,
+				4F81475925D5000B006188E1 /* LogOutModel.swift */,
+				4F4AA23E25D55D2D00D16604 /* TaskDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,12 +276,15 @@
 				4FD62FAE25D108300079FB93 /* AppDelegate.swift */,
 				4FD62FB025D108300079FB93 /* SceneDelegate.swift */,
 				4FD62FB425D108300079FB93 /* Main.storyboard */,
-				4F8C76D925D26AF9007DDB1D /* Home */,
-				4FDB920625D189A1008A6CC5 /* Extension */,
+				4FDB920625D189A1008A6CC5 /* Extensions */,
 				4F8C76D425D251C7007DDB1D /* APIManager */,
 				4F8C76D025D24F90007DDB1D /* API Constant */,
 				4F8C76D325D2518D007DDB1D /* Models */,
+				4F556C4725D43708008A255C /* Cells */,
+				4F556C6625D47A4B008A255C /* Add Task */,
 				4FDB921525D1B961008A6CC5 /* Get Started */,
+				4F556C6125D456AE008A255C /* Delete Tasks */,
+				4F8C76D925D26AF9007DDB1D /* Home */,
 				4FDB921625D1B985008A6CC5 /* Login */,
 				4FDB921725D1B9A9008A6CC5 /* Sign Up */,
 				4FDB921825D1B9B5008A6CC5 /* Forgot Password */,
@@ -223,6 +293,7 @@
 				4FD62FB725D108340079FB93 /* Assets.xcassets */,
 				4FD62FB925D108340079FB93 /* LaunchScreen.storyboard */,
 				4FD62FBC25D108340079FB93 /* Info.plist */,
+				4F556C4325D43074008A255C /* Localizable.strings */,
 			);
 			path = "Task-Daily";
 			sourceTree = "<group>";
@@ -270,14 +341,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		4FDB920625D189A1008A6CC5 /* Extension */ = {
+		4FDB920625D189A1008A6CC5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4F556C4525D4308B008A255C /* NSObject+Extension.swift */,
 				4FDB920725D189CE008A6CC5 /* String + Extension.swift */,
 				4FDB920925D18A06008A6CC5 /* UiAlertController + Extension.swift */,
 				4FDB920B25D18A50008A6CC5 /* UiViewController + Extension.swift */,
+				4F556BEC25D400DD008A255C /* NSUserDefaults + Extension.swift */,
+				4F556C5825D43C17008A255C /* UIView + Extension.swift */,
+				4F556C5B25D45021008A255C /* UIProgessView + Extension.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4FDB921525D1B961008A6CC5 /* Get Started */ = {
@@ -452,6 +527,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F556C6025D4538B008A255C /* EditTableViewCell.xib in Resources */,
 				4FD62FF625D10BA30079FB93 /* Poppins-Black.ttf in Resources */,
 				4FD62FF725D10BA30079FB93 /* Poppins-ExtraBold.ttf in Resources */,
 				4FD62FF425D10BA30079FB93 /* Poppins-Italic.ttf in Resources */,
@@ -464,7 +540,10 @@
 				4FD62FFA25D10BA30079FB93 /* Poppins-Light.ttf in Resources */,
 				4FD62FF925D10BA30079FB93 /* Poppins-ExtraLight.ttf in Resources */,
 				4FD62FFD25D10BA30079FB93 /* Poppins-Thin.ttf in Resources */,
+				4F556C5725D43789008A255C /* TaskTableViewCell.xib in Resources */,
 				4FD6300225D10BA30079FB93 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				4F556C5325D43770008A255C /* TypeCollectionViewCell.xib in Resources */,
+				4F556C4425D43074008A255C /* Localizable.strings in Resources */,
 				4FD62FFC25D10BA30079FB93 /* Poppins-Regular.ttf in Resources */,
 				4FD62FF525D10BA30079FB93 /* Poppins-MediumItalic.ttf in Resources */,
 				4FD6300325D10BA30079FB93 /* Poppins-SemiBold.ttf in Resources */,
@@ -601,16 +680,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FDB920A25D18A06008A6CC5 /* UiAlertController + Extension.swift in Sources */,
+				4F556C6825D47AC2008A255C /* AddTaskViewController.swift in Sources */,
+				4F556C6325D456D9008A255C /* DeleteViewController.swift in Sources */,
 				4FD62FB325D108300079FB93 /* InitialViewController.swift in Sources */,
 				4FD62FDF25D109130079FB93 /* LoginViewController.swift in Sources */,
 				4FDB920C25D18A50008A6CC5 /* UiViewController + Extension.swift in Sources */,
 				4F8C76CF25D24F8C007DDB1D /* APIConstant.swift in Sources */,
+				4F81475A25D5000B006188E1 /* LogOutModel.swift in Sources */,
 				4F8C76D825D26AE3007DDB1D /* HomeViewController.swift in Sources */,
+				4F556BED25D400DD008A255C /* NSUserDefaults + Extension.swift in Sources */,
 				4FDB920825D189CE008A6CC5 /* String + Extension.swift in Sources */,
+				4F556C5C25D45021008A255C /* UIProgessView + Extension.swift in Sources */,
+				4F556C5F25D4538B008A255C /* EditTableViewCell.swift in Sources */,
+				4F556C5925D43C17008A255C /* UIView + Extension.swift in Sources */,
 				4FD62FAF25D108300079FB93 /* AppDelegate.swift in Sources */,
+				4F4AA23F25D55D2D00D16604 /* TaskDataModel.swift in Sources */,
 				4FD62FB125D108300079FB93 /* SceneDelegate.swift in Sources */,
 				4F8C76D225D25186007DDB1D /* RegisterModel.swift in Sources */,
+				4F556C5625D43789008A255C /* TaskTableViewCell.swift in Sources */,
+				4F556BEB25D3FC1E008A255C /* LoginModel.swift in Sources */,
 				4FDB921425D1B2AA008A6CC5 /* ResetPasswordViewController.swift in Sources */,
+				4F556C4625D4308B008A255C /* NSObject+Extension.swift in Sources */,
+				4F556C5225D43770008A255C /* TypeCollectionViewCell.swift in Sources */,
+				4F81475825D4F95A006188E1 /* AddTaskModel.swift in Sources */,
 				4F8C76D625D251EC007DDB1D /* APIManager.swift in Sources */,
 				4FDB921025D19AB8008A6CC5 /* SignUpViewController.swift in Sources */,
 				4FDB921225D1A6EF008A6CC5 /* ForgotPasswordViewController.swift in Sources */,

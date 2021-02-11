@@ -1,5 +1,5 @@
 //
-//  LoginTableViewController.swift
+//  LoginViewController.swift
 //  Task-Daily
 //
 //  Created by Fazle Rabbi Linkon on 8/2/21.
@@ -20,7 +20,7 @@ class LoginViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -29,13 +29,16 @@ class LoginViewController: UITableViewController {
     // MARK: - Login Button Action
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-        ValidateLoginCredential()
+        if ValidateLoginCredential() {
+            Indicator.sharedInstance.showIndicator()
+            self.callLoginApi()
+        }
     }
 
     // MARK: - Forgot Password Button Action
 
     @IBAction func forgotPasswordPressed(_ sender: Any) {
-        if let forgotPassVC = self.storyboard?.instantiateViewController(identifier: "ForgotPasswordTableViewController") as? ForgotPasswordViewController {
+        if let forgotPassVC = self.storyboard?.instantiateViewController(identifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
             self.navigationController?.pushViewController (forgotPassVC, animated: true)
         }
     }
@@ -43,8 +46,40 @@ class LoginViewController: UITableViewController {
     // MARK: - SignUp Password Button Action
     @IBAction func signUpButtonPressed(_ sender: Any) {
         print("SignUp Clicked")
-        if let signupVC = self.storyboard?.instantiateViewController(identifier: "SignUpTableViewController") as? SignUpViewController {
+        if let signupVC = self.storyboard?.instantiateViewController(identifier: "SignUpViewController") as? SignUpViewController {
             self.navigationController?.pushViewController (signupVC, animated: true)
+        }
+    }
+
+    private func callLoginApi() {
+
+        guard let email = self.userNameTextField.text else {
+            return
+        }
+        guard let password = self.passwordTextField.text else {
+            return
+        }
+
+        let loginData = LoginModel(email: email, password: password)
+
+        APIManager.sharedInstance.loginAPI(login: loginData) { (success, message) in
+
+            if success {
+
+                let accessToken = message
+                self.saveObject(key: "accessToken", value: accessToken)
+                Indicator.sharedInstance.hideIndicator()
+                if let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as? HomeViewController {
+                    self.navigationController?.pushViewController (homeVC, animated: true)
+                }
+
+            } else {
+                Indicator.sharedInstance.hideIndicator()
+                self.openAlert(title: "Error", message: message, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+                    self.userNameTextField.text = ""
+                    self.passwordTextField.text = ""
+                }])
+            }
         }
     }
 }
@@ -72,13 +107,13 @@ extension LoginViewController {
 
 extension LoginViewController {
 
-    fileprivate func ValidateLoginCredential() {
+    fileprivate func ValidateLoginCredential() -> Bool {
 
         if let userName = userNameTextField.text, let password = passwordTextField.text {
 
             if userName == "" {
 
-                openAlert(title: "Error", message: "Please enter your user name first.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+                openAlert(title: "Error", message: "Please enter your email first.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                     print("Okay clicked!")
                 }])
 
@@ -87,31 +122,23 @@ extension LoginViewController {
                 openAlert(title: "Error", message: "Please enter your password.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                     print("Okay clicked!")
                 }])
+            } else if !userName.validateEmailId() {
 
+                openAlert(title: "Error", message: "Email enter a valid email address", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+                    print("Okay clicked!")
+                    self.userNameTextField.text = ""
+                    self.passwordTextField.text = ""
+                }])
+
+            } else {
+                return true
             }
-            else {
-
-                if !userName.validateEmailId() {
-
-                    openAlert(title: "Error", message: "Email enter a valid user name", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-                        print("Okay clicked!")
-                    }])
-
-                } else if !password.validatePassword() {
-
-                    openAlert(title: "Error", message: "Please enter valid password.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-                        print("Okay clicked!")
-                    }])
-
-                } else {
-                    // Navigation - Home Screen
-                }
-
-            }
-        } else {
+        }
+        else {
             openAlert(title: "Error", message: "Please enter your login credential first.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                 print("Okay clicked!")
             }])
         }
+        return false
     }
 }
