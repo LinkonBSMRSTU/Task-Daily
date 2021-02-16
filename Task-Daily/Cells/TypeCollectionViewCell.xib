@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TypeCollectionViewCell" id="gTV-IL-0wX" customClass="TypeCollectionViewCell" customModule="Task_Daily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="206" height="79"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="206" height="79"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGh-em-2GH">
+                        <rect key="frame" x="0.0" y="0.0" width="206" height="79"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AZp-UM-4gn">
+                                <rect key="frame" x="0.0" y="0.0" width="206" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCx-n0-dQc">
+                                        <rect key="frame" x="0.0" y="0.0" width="206" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05e-cH-se7">
+                                        <rect key="frame" x="0.0" y="39.5" width="206" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AZp-UM-4gn" secondAttribute="bottom" id="Svf-ae-opt"/>
+                            <constraint firstItem="AZp-UM-4gn" firstAttribute="top" secondItem="YGh-em-2GH" secondAttribute="top" id="ehR-RY-aLy"/>
+                            <constraint firstAttribute="trailing" secondItem="AZp-UM-4gn" secondAttribute="trailing" id="hh2-gd-yx2"/>
+                            <constraint firstItem="AZp-UM-4gn" firstAttribute="leading" secondItem="YGh-em-2GH" secondAttribute="leading" id="kpg-fi-Z9B"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="YGh-em-2GH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5si-az-mFi"/>
+                <constraint firstItem="YGh-em-2GH" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="N21-Qs-Mpa"/>
+                <constraint firstItem="YGh-em-2GH" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="eYr-kR-etO"/>
+                <constraint firstAttribute="bottom" secondItem="YGh-em-2GH" secondAttribute="bottom" id="sqi-V1-i08"/>
+                <constraint firstItem="YGh-em-2GH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yAQ-OY-Slm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="206" height="79"/>
+            <connections>
+                <outlet property="backView" destination="AZp-UM-4gn" id="ecj-eh-NqB"/>
+                <outlet property="bgView" destination="YGh-em-2GH" id="sjz-ZW-sym"/>
+                <outlet property="taskCount" destination="05e-cH-se7" id="jYA-Uy-rmL"/>
+                <outlet property="taskType" destination="HCx-n0-dQc" id="OVi-jI-H6p"/>
+            </connections>
+            <point key="canvasLocation" x="244.92753623188409" y="110.15625"/>
+        </collectionViewCell>
+    </objects>
+</document>

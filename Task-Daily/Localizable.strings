@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  TrainerMap
+
+  Created by DreamOnline on 25/1/21.
+  
+*/
+
+
+"WELCOME_VIEW_CONTROLLER_TITLE" = "Welcome";
+"WELCOME_TEXT" = "Hello World!!";
+"NEXT_VIEW_CONTROLLER_TITLE" = "Next";
+"INFO_TEXT" = "This is second page";
+"MESSAGE_VIEW_CONTROLLER_TITLE" = "Message";
+"PROFILE_VIEW_CONTROLLER_TITLE" = "Profile";
+"LOGIN_TITLE" = "Login";
+
